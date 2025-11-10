@@ -1,0 +1,115 @@
+[package]
+name = "onchain-wallet"
+version = "2.1.0"
+edition = "2021"
+authors = ["DeFi Team <defi@example.com>"]
+description = "Enterprise-grade multi-chain wallet system with advanced security"
+
+[features]
+default = []
+production = ["aws-kms"]
+aws-kms = []
+
+[dependencies]
+# Async Runtime
+tokio = { version = "1.35", features = ["full"] }
+tokio-stream = "0.1"
+
+# Web Framework
+axum = { version = "0.7", features = ["macros", "ws"] }
+tower = { version = "0.4", features = ["full"] }
+tower-http = { version = "0.5", features = ["fs", "cors", "trace", "auth"] }
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio", "postgres", "uuid", "chrono", "json", "migrate"] }
+
+# Redis
+redis = { version = "0.24", features = ["tokio-comp", "connection-manager"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Blockchain SDKs
+solana-sdk = "1.17"
+solana-client = "1.17"
+
+# Ethereum
+ethers = { version = "2.0", features = ["ws", "rustls"] }
+
+# Crypto
+bip39 = "2.0"
+bip32 = "0.5"
+sha2 = "0.10"
+hex = "0.4"
+bs58 = "0.5"
+
+# Encryption
+aes-gcm = "0.10"
+rand = "0.8"
+
+# Error Handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# HTTP Client
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+
+# Utils
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.6", features = ["serde", "v4"] }
+once_cell = "1.19"
+futures = "0.3"
+async-trait = "0.1"
+dotenv = "0.15"
+
+# CSV Export
+csv = "1.3"
+
+# HMAC for signatures
+hmac = "0.12"
+
+# Additional features
+base64 = "0.21"
+
+# ========== Phase 1 Security Dependencies ==========
+
+# AWS KMS Integration
+aws-sdk-kms = "1.11"
+aws-config = "1.1"
+aws-types = "1.1"
+
+# JWT Authentication
+jsonwebtoken = "9.2"
+
+# Password Hashing
+bcrypt = "0.15"
+
+# MFA/TOTP
+totp-rs = { version = "5.4", features = ["qr", "gen_secret"] }
+qrcode = "0.13"
+
+# Email for MFA
+lettre = "0.11"
+
+# Rate Limiting
+tower-governor = "0.1"
+
+# Regex for validation
+regex = "1.10"
+
+# IP Network validation
+ipnetwork = "0.20"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[profile.dev]
+opt-level = 0
+debug = true

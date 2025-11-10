@@ -1,0 +1,67 @@
+
+#本机docker配置
+| 服务           | 连接字符串             | 用户名       | 密码                     |
+|---------------|-----------------------|-------------|-------------------------|
+| MySQL         | localhost:3307        | root / user | root123456 / user123456 |
+| PostgreSQL    | localhost:5432        | postgres    | postgres123456          |
+| MongoDB       | localhost:27017       | root        | root123456              |
+| Milvus        | localhost:19530       | root        | Milvus                  |
+| Kafka         | localhost:9092        | -           | -                       |
+| Elasticsearch | http://localhost:9200 | -           | -                       |
+| MinIO         | localhost:9000        | minioadmin  | minioadmin              |
+
+# ===========================================
+# 以太坊DApp环境配置 (优化版)
+# ===========================================
+
+# 网络RPC配置 - 使用测试中最快的RPC
+INFURA_PROJECT_ID=2df62bfc4e994527bb88ff684aa8fe65
+
+# 主网RPC (按速度排序)
+MAINNET_RPC_URL=https://eth.llamarpc.com
+BACKUP_MAINNET_RPC=https://ethereum.publicnode.com
+BACKUP_MAINNET_RPC2=https://ethereum-rpc.publicnode.com
+BACKUP_MAINNET_RPC3=https://mainnet.infura.io/v3/2df62bfc4e994527bb88ff684aa8fe65
+
+# 测试网RPC (按速度排序)
+SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/2df62bfc4e994527bb88ff684aa8fe65
+BACKUP_SEPOLIA_RPC=https://eth-sepolia.public.blastapi.io
+BACKUP_SEPOLIA_RPC2=https://sepolia.gateway.tenderly.co
+BACKUP_SEPOLIA_RPC3=https://rpc.sepolia.dev
+
+# 钱包配置
+PRIVATE_KEY=2da0a38f9d1945b1685a3ca97adf2ae423035d45275d374e388cc20e24df4e40
+
+metamusk_ETH_key=0x197131c5e0400602fFe47009D38d12f815411149
+Ethereum 0.05 SEPOLIAETH $188.95
+
+领取地址:https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+
+#SOLANA
+metamusk_solana_key=4X5HZ3mMRLPGcNhuWtLrGNNv8QAqWPsxtXAt779QCUJL
+
+# 应用配置 - 使用主网（因为主网RPC更稳定）
+NODE_ENV=development
+NETWORK=mainnet
+TIMEOUT_MS=15000
+
+# Infura配置
+INFURA_API_SECRET=WXHOW20DUFy/9VA6Kh/ABHAssDvEjR8YZ+P2yGETWPwtEHxviD3tqQ
+
+
+#火山模型-free
+api_url: str = "https://ark.cn-beijing.volces.com/api/v3/",
+api_key: str = "e8d02588-9dc4-4927-8f2c-79129ccf2dca",
+model: str = "deepseek-v3-250324"
+
+本地mysql:
+root
+无密码
+
+
+#ETHERSCAN
+ETHERSCAN_API_KEY = "MM4DWVEE61J5WY6GTW33HVNASH8DRZRRQC"
+ETHERSCAN_APP_NAME=aitachi01
+ETHERSCAN_ADDED_ON=2025-10-19
+ETHERSCAN_DASHBOARD_URL=https://etherscan.io/apidashboard
+
