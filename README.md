@@ -1,130 +1,132 @@
-# 企业级多链钱包系统
+# Enterprise Multi-Chain Wallet System
 
 <div align="center">
 
 ![Rust](https://img.shields.io/badge/Rust-1.75+-orange.svg)
 ![Docker](https://img.shields.io/badge/Docker-24.0+-blue.svg)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791.svg)
-![Security](https://img.shields.io/badge/Security-B+级-brightgreen.svg)
+![Security](https://img.shields.io/badge/Security-B+%20Grade-brightgreen.svg)
 ![Version](https://img.shields.io/badge/Version-v2.1.0-blue.svg)
-![Status](https://img.shields.io/badge/Status-生产就绪-success.svg)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-**交易所级别的多链钱包解决方案 | 生产就绪 | B+级安全**
+**Exchange-Grade Multi-Chain Wallet Solution | Production Ready | B+ Security Rating**
 
-[功能特性](#-功能特性) • [快速开始](#-快速开始) • [安全特性](#-安全特性) • [测试报告](#-测试报告) • [文档](#-文档)
+[Features](#-features) • [Quick Start](#-quick-start) • [Security](#-security) • [Testing](#-testing) • [Documentation](#-documentation)
+
+[中文文档](README_CN.md)
 
 </div>
 
 ---
 
-## 🎉 v2.1.0 项目亮点
+## 🎉 v2.1.0 Highlights
 
 <div align="center">
 
-| 🏆 安全评级 | 📊 测试覆盖率 | ⚡ 性能指标 | 🔒 风险降低 |
-|------------|-------------|-----------|-----------|
-| **B+级** (89/100) | **94.3%** | **800+ TPS** | **97.5%** |
+| 🏆 Security Rating | 📊 Test Coverage | ⚡ Performance | 🔒 Risk Reduction |
+|-------------------|------------------|---------------|-------------------|
+| **B+ Grade** (89/100) | **94.3%** | **800+ TPS** | **97.5%** |
 
 </div>
 
-### ✅ 生产就绪特性
+### ✅ Production-Ready Features
 
-- ✅ **18个功能模块100%完成** - 从钱包管理到DeFi集成
-- ✅ **780个测试用例全部通过** - 包含328笔链上交易验证
-- ✅ **B+级安全评级** - 从C级提升,0严重/0高危漏洞
-- ✅ **合规性达标** - PCI DSS 79%, SOC 2 80%, ISO 27001 72%
-- ✅ **企业级性能** - 800+ TPS, <200ms响应, 99.95%可用性
-
----
-
-## 📖 项目简介
-
-企业级多链钱包系统是一个面向交易所级别的下一代多链钱包解决方案,支持Solana、Ethereum、Bitcoin、BSC、Polygon等主流公链,提供冷热钱包分层、高并发资产调度、全链路审计的企业级功能。
-
-**v2.1.0** 版本完成Phase 1安全强化,实现了AWS KMS密钥管理、JWT认证授权、MFA多因素认证、多级速率限制等8个关键安全特性,系统已通过全面安全审计,可安全部署至生产环境。
-
-### 核心特性
-
-- 🏦 **交易所级安全**: AWS KMS密钥管理, MFA认证, RBAC权限控制
-- ⚡ **高性能架构**: Rust异步编程,支持800+ TPS, API响应<200ms
-- 🔗 **多链支持**: Solana、Ethereum、BSC、Polygon、Bitcoin等主流公链
-- 🛡️ **智能风控**: 实时异常检测,黑名单管理,多级速率限制
-- 📊 **全链路审计**: 完整的操作日志和资产追踪,审计日志签名
-- 🚀 **易于扩展**: 统一抽象层,快速集成新链
+- ✅ **18 Functional Modules 100% Complete** - From wallet management to DeFi integration
+- ✅ **780 Test Cases All Passed** - Including 328 on-chain transaction verifications
+- ✅ **B+ Security Rating** - Upgraded from C grade, 0 critical/0 high-risk vulnerabilities
+- ✅ **Compliance Achieved** - PCI DSS 79%, SOC 2 80%, ISO 27001 72%
+- ✅ **Enterprise Performance** - 800+ TPS, <200ms response, 99.95% uptime
 
 ---
 
-## 🎯 功能特性
+## 📖 Overview
 
-### Phase 1 核心功能 (18个模块 - 100%完成) ✅
+Enterprise Multi-Chain Wallet System is a next-generation, exchange-grade multi-chain wallet solution designed for cryptocurrency exchanges, DeFi platforms, and payment service providers. It supports mainstream blockchains including Solana, Ethereum, Bitcoin, BSC, and Polygon, providing enterprise-level features such as hot/warm/cold wallet layering, high-concurrency asset scheduling, and full audit trails.
 
-#### 基础服务层 (8个模块)
-- [x] **钱包管理服务** - 地址生成、余额查询、冷热钱包分层
-- [x] **提现服务** - 自动/手动提现、批量处理、状态追踪
-- [x] **充值服务** - 链上监听、自动确认、地址池管理
-- [x] **风控引擎** - 实时检测、黑名单、限额管理
-- [x] **审计服务** - 操作日志、资产追踪、合规报告
-- [x] **密钥管理** - AWS KMS集成、信封加密、密钥轮换
-- [x] **任务调度** - 自动归集、余额预警、定时任务
-- [x] **API网关** - 认证授权、速率限制、安全响应头
+**v2.1.0** completes Phase 1 security hardening, implementing 8 critical security features including AWS KMS key management, JWT authentication, MFA, and multi-level rate limiting. The system has passed comprehensive security audits and is ready for production deployment.
 
-#### 增强功能层 (10个模块)
-- [x] **NFT资产管理** - NFT持仓查询、转账、元数据获取
-- [x] **代币管理** - ERC20/SPL代币支持、余额查询
-- [x] **DeFi集成** - Swap、Lending、Staking集成
-- [x] **交易历史** - 多链交易记录、导出报表
-- [x] **Gas优化** - 费用估算、Gas价格预测
-- [x] **地址簿** - 白名单管理、地址标签
-- [x] **批量转账** - 批量支付、空投工具
-- [x] **Webhook** - 交易通知、余额变动推送
-- [x] **多签管理** - 多签钱包创建、审批流程
-- [x] **数据分析** - 资产统计、收益分析、报表生成
+### Core Features
+
+- 🏦 **Exchange-Grade Security**: AWS KMS key management, MFA authentication, RBAC access control
+- ⚡ **High-Performance Architecture**: Rust async programming, 800+ TPS, <200ms API response
+- 🔗 **Multi-Chain Support**: Solana, Ethereum, BSC, Polygon, Bitcoin and other mainstream blockchains
+- 🛡️ **Smart Risk Control**: Real-time anomaly detection, blacklist management, multi-level rate limiting
+- 📊 **Full Audit Trail**: Complete operation logs and asset tracking, audit log signing
+- 🚀 **Easy to Extend**: Unified abstraction layer, rapid integration of new chains
 
 ---
 
-## 🔐 安全特性
+## 🎯 Features
 
-### Phase 1 已实施 (8个关键特性) ✅
+### Phase 1 Core Features (18 Modules - 100% Complete) ✅
 
-#### 1. AWS KMS密钥管理
+#### Foundation Layer (8 Modules)
+- [x] **Wallet Management** - Address generation, balance queries, hot/warm/cold layering
+- [x] **Withdrawal Service** - Auto/manual withdrawal, batch processing, status tracking
+- [x] **Deposit Service** - On-chain monitoring, auto-confirmation, address pool management
+- [x] **Risk Control Engine** - Real-time detection, blacklist, limit management
+- [x] **Audit Service** - Operation logs, asset tracking, compliance reports
+- [x] **Key Management** - AWS KMS integration, envelope encryption, key rotation
+- [x] **Task Scheduler** - Auto-sweep, balance alerts, scheduled tasks
+- [x] **API Gateway** - Authentication, rate limiting, security headers
+
+#### Enhancement Layer (10 Modules)
+- [x] **NFT Asset Management** - NFT holdings query, transfer, metadata retrieval
+- [x] **Token Management** - ERC20/SPL token support, balance queries
+- [x] **DeFi Integration** - Swap, Lending, Staking integration
+- [x] **Transaction History** - Multi-chain transaction records, report export
+- [x] **Gas Optimization** - Fee estimation, gas price prediction
+- [x] **Address Book** - Whitelist management, address labels
+- [x] **Batch Transfer** - Batch payment, airdrop tools
+- [x] **Webhook** - Transaction notifications, balance change push
+- [x] **Multi-Sig Management** - Multi-sig wallet creation, approval process
+- [x] **Data Analytics** - Asset statistics, yield analysis, report generation
+
+---
+
+## 🔐 Security Features
+
+### Phase 1 Implementation (8 Key Features) ✅
+
+#### 1. AWS KMS Key Management
 ```rust
-// 使用AWS KMS加密主密钥
+// Encrypt master key with AWS KMS
 let kms = KMSKeyManager::from_env().await?;
 let encrypted_master_key = kms.encrypt(&master_key).await?;
 
-// 信封加密保护私钥
+// Envelope encryption for private keys
 let (data_key, encrypted_key) = kms.generate_data_key().await?;
 let ciphertext = encrypt_with_data_key(&private_key, &data_key)?;
 ```
-- ✅ 替代明文主密钥存储
-- ✅ 支持密钥自动轮换
-- ✅ 所有密钥操作审计
+- ✅ Replace plaintext master key storage
+- ✅ Support automatic key rotation
+- ✅ Audit all key operations
 
-#### 2. JWT认证授权
+#### 2. JWT Authentication & Authorization
 ```rust
 pub struct Claims {
-    pub sub: String,           // 用户ID
-    pub role: String,          // 角色: admin, operator, viewer
-    pub permissions: Vec<String>,  // 权限列表
-    pub session_id: String,    // 会话ID
+    pub sub: String,           // User ID
+    pub role: String,          // Role: admin, operator, viewer
+    pub permissions: Vec<String>,  // Permission list
+    pub session_id: String,    // Session ID
 }
 ```
-- ✅ RBAC权限控制
-- ✅ Session管理
-- ✅ Token自动刷新
+- ✅ RBAC permission control
+- ✅ Session management
+- ✅ Automatic token refresh
 
-#### 3. MFA多因素认证
-- ✅ TOTP二次验证
-- ✅ 邮件/短信验证
-- ✅ 阶梯式MFA (根据操作金额)
+#### 3. MFA Multi-Factor Authentication
+- ✅ TOTP secondary verification
+- ✅ Email/SMS verification
+- ✅ Tiered MFA (based on operation amount)
 
-#### 4. 多级速率限制
-- ✅ IP级别: 1000 req/hour
-- ✅ 用户级别: 5000 req/hour
-- ✅ 操作级别: withdrawal=10/day
+#### 4. Multi-Level Rate Limiting
+- ✅ IP level: 1000 req/hour
+- ✅ User level: 5000 req/hour
+- ✅ Operation level: withdrawal=10/day
 
-#### 5. 安全响应头
+#### 5. Security Response Headers
 ```http
 X-Frame-Options: DENY
 X-Content-Type-Options: nosniff
@@ -132,53 +134,53 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 Content-Security-Policy: default-src 'self'
 ```
 
-#### 6. 错误处理完善
-- ✅ 统一错误类型
-- ✅ 用户友好消息
-- ✅ 敏感信息保护
+#### 6. Enhanced Error Handling
+- ✅ Unified error types
+- ✅ User-friendly messages
+- ✅ Sensitive information protection
 
-#### 7. CORS配置
-- ✅ 精确域名控制
-- ✅ 安全的跨域策略
+#### 7. CORS Configuration
+- ✅ Precise domain control
+- ✅ Secure cross-origin policy
 
-#### 8. 日志脱敏
-- ✅ 自动脱敏私钥、密码
-- ✅ 保护用户隐私
+#### 8. Log Desensitization
+- ✅ Auto-desensitize private keys and passwords
+- ✅ Protect user privacy
 
-### 安全评分提升
+### Security Score Improvement
 
-| 维度 | Phase 0 | Phase 1 | 提升 |
-|-----|---------|---------|------|
-| 密钥管理 | 20/100 | 95/100 | +375% |
-| 认证授权 | 0/100 | 98/100 | +∞ |
-| 数据保护 | 30/100 | 90/100 | +200% |
-| API安全 | 25/100 | 92/100 | +268% |
-| 审计监控 | 50/100 | 85/100 | +70% |
-| 合规性 | 10/100 | 75/100 | +650% |
-| **总分** | **22/100** | **89/100** | **+305%** |
+| Dimension | Phase 0 | Phase 1 | Improvement |
+|-----------|---------|---------|-------------|
+| Key Management | 20/100 | 95/100 | +375% |
+| Authentication | 0/100 | 98/100 | +∞ |
+| Data Protection | 30/100 | 90/100 | +200% |
+| API Security | 25/100 | 92/100 | +268% |
+| Audit & Monitoring | 50/100 | 85/100 | +70% |
+| Compliance | 10/100 | 75/100 | +650% |
+| **Total Score** | **22/100** | **89/100** | **+305%** |
 
 ---
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 环境要求
+### Requirements
 
 - Rust 1.75+
 - Docker 24.0+
 - Docker Compose 2.0+
 - PostgreSQL 16+
 - Redis 7+
-- AWS账号 (生产环境KMS)
+- AWS Account (for production KMS)
 
-### 安装步骤
+### Installation
 
-#### 1. 克隆项目
+#### 1. Clone Repository
 ```bash
-git clone https://github.com/your-org/onchain-wallet.git
-cd onchain-wallet
+git clone https://github.com/aitachi/onchainWallet.git
+cd onchainWallet
 ```
 
-#### 2. 启动Docker服务
+#### 2. Start Docker Services
 
 **Windows**:
 ```batch
@@ -191,31 +193,31 @@ Docker-Manager.bat
 docker-compose up -d
 ```
 
-#### 3. 配置环境变量
+#### 3. Configure Environment
 ```bash
 cp .env.example .env
-# 编辑 .env 文件,配置以下信息:
+# Edit .env file with:
 # - DATABASE_URL
 # - REDIS_URL
-# - AWS_KMS_KEY_ID (生产环境)
+# - AWS_KMS_KEY_ID (production)
 # - JWT_SECRET
-# - SMTP配置 (MFA邮件)
+# - SMTP config (for MFA emails)
 ```
 
-#### 4. 初始化数据库
+#### 4. Initialize Database
 ```bash
 psql -h localhost -p 5432 -U wallet_user -d wallet_db -f migrations/001_init.sql
 ```
 
-#### 5. 构建运行
+#### 5. Build & Run
 
-**开发环境** (使用本地密钥):
+**Development** (local keys):
 ```bash
 cargo build --release
 cargo run
 ```
 
-**生产环境** (使用AWS KMS):
+**Production** (AWS KMS):
 ```bash
 cargo build --release --features production
 AWS_KMS_KEY_ID=your-key-id cargo run --release
@@ -223,36 +225,36 @@ AWS_KMS_KEY_ID=your-key-id cargo run --release
 
 ---
 
-## 📚 API文档
+## 📚 API Documentation
 
-### 认证
+### Authentication
 
-所有API请求需要在Header中包含JWT Token:
+All API requests require JWT token in header:
 ```http
 Authorization: Bearer <your_jwt_token>
 ```
 
-### 核心API端点
+### Core Endpoints
 
-#### 钱包管理
+#### Wallet Management
 ```bash
-# 创建钱包
+# Create wallet
 POST /api/v1/wallets
 {
   "chain": "solana",
   "wallet_type": "hot"
 }
 
-# 查询余额
+# Query balance
 GET /api/v1/wallets/{address}/balance
 
-# 获取钱包列表
+# List wallets
 GET /api/v1/wallets?chain=solana&type=hot
 ```
 
-#### 提现
+#### Withdrawal
 ```bash
-# 创建提现请求
+# Create withdrawal
 POST /api/v1/withdrawals
 {
   "from_address": "...",
@@ -262,190 +264,194 @@ POST /api/v1/withdrawals
   "mfa_code": "123456"
 }
 
-# 查询提现状态
+# Query withdrawal status
 GET /api/v1/withdrawals/{id}
 ```
 
-#### 充值
+#### Deposit
 ```bash
-# 获取充值地址
+# Get deposit address
 GET /api/v1/deposits/address?chain=solana&user_id=123
 
-# 查询充值记录
+# Query deposit records
 GET /api/v1/deposits?user_id=123&status=confirmed
 ```
 
-完整API文档: `/docs/API.md`
+Full API documentation: `/docs/API.md`
 
 ---
 
-## 🏗️ 架构设计
+## 🏗️ Architecture
 
-### 系统架构图
+### System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                   API网关层                          │
+│                   API Gateway                        │
 │  JWT Auth | Rate Limit | Security Headers | CORS   │
 └──────────────────┬──────────────────────────────────┘
                    │
 ┌──────────────────┴──────────────────────────────────┐
-│                  核心服务层 (Rust)                   │
+│              Core Services (Rust)                    │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐          │
-│  │热钱包服务│  │温钱包服务│  │冷钱包服务│          │
+│  │Hot Wallet│  │Warm Wallet│ │Cold Wallet│          │
 │  └──────────┘  └──────────┘  └──────────┘          │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐          │
-│  │资产调度  │  │风控引擎  │  │审计服务  │          │
+│  │Scheduler │  │Risk Engine│ │  Audit   │          │
 │  └──────────┘  └──────────┘  └──────────┘          │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐          │
-│  │密钥管理  │  │MFA认证   │  │任务调度  │          │
+│  │Key Mgmt  │  │   MFA    │  │Task Queue│          │
 │  └──────────┘  └──────────┘  └──────────┘          │
 └──────────────────┬──────────────────────────────────┘
                    │
 ┌──────────────────┴──────────────────────────────────┐
-│                   数据层                             │
+│                   Data Layer                         │
 │  PostgreSQL | Redis | Kafka | MinIO | Elasticsearch │
 │  AWS KMS | AWS S3 | CloudWatch                      │
 └──────────────────┬──────────────────────────────────┘
                    │
 ┌──────────────────┴──────────────────────────────────┐
-│                  区块链层                            │
+│                 Blockchain Layer                     │
 │  Solana | Ethereum | BSC | Polygon | Bitcoin        │
 └─────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📂 项目结构
+## 📂 Project Structure
 
 ```
-onchain-wallet/
+onchainWallet/
 ├── src/
-│   ├── main.rs                    # 主程序入口
-│   ├── models/                    # 数据模型
+│   ├── main.rs                    # Entry point
+│   ├── models/                    # Data models
 │   │   ├── mod.rs
 │   │   └── types.rs
-│   ├── services/                  # 业务服务
-│   │   ├── blockchain/            # 区块链适配器
+│   ├── services/                  # Business services
+│   │   ├── blockchain/            # Blockchain adapters
 │   │   │   ├── mod.rs
-│   │   │   ├── adapter.rs         # 统一接口
-│   │   │   ├── solana.rs          # Solana实现
-│   │   │   ├── ethereum.rs        # Ethereum实现
-│   │   │   ├── bsc.rs             # BSC实现
-│   │   │   └── polygon.rs         # Polygon实现
-│   │   ├── wallet.rs              # 钱包管理
-│   │   ├── withdrawal.rs          # 提现服务
-│   │   ├── deposit.rs             # 充值服务
-│   │   ├── risk.rs                # 风控引擎
-│   │   └── audit.rs               # 审计服务
-│   └── middleware/                # 中间件 (v2.1.0新增)
+│   │   │   ├── adapter.rs         # Unified interface
+│   │   │   ├── solana.rs          # Solana implementation
+│   │   │   ├── ethereum.rs        # Ethereum implementation
+│   │   │   ├── bsc.rs             # BSC implementation
+│   │   │   └── polygon.rs         # Polygon implementation
+│   │   ├── wallet.rs              # Wallet management
+│   │   ├── withdrawal.rs          # Withdrawal service
+│   │   ├── deposit.rs             # Deposit service
+│   │   ├── risk.rs                # Risk control engine
+│   │   └── audit.rs               # Audit service
+│   └── middleware/                # Middleware (v2.1.0)
 │       ├── mod.rs
-│       ├── auth.rs                # JWT认证授权
-│       ├── rate_limit.rs          # 速率限制
-│       ├── error_handler.rs       # 错误处理
-│       └── security_headers.rs    # 安全响应头
-├── migrations/                    # 数据库迁移
+│       ├── auth.rs                # JWT authentication
+│       ├── rate_limit.rs          # Rate limiting
+│       ├── error_handler.rs       # Error handling
+│       └── security_headers.rs    # Security headers
+├── migrations/                    # Database migrations
 │   └── 001_init.sql
-├── report/                        # 测试报告 (v2.1.0新增)
-│   ├── README.md                  # 总结报告
-│   ├── FUNCTIONAL_TEST_REPORT.md  # 功能测试报告
-│   ├── SECURITY_TEST_REPORT.md    # 安全测试报告
-│   ├── FINAL_SECURITY_AUDIT_REPORT.md  # 安全审计报告
-│   └── transaction_hashes.json    # 链上交易数据
-├── docker-compose.yml             # Docker配置
-├── Cargo.toml                     # Rust依赖 (v2.1.0)
-├── PROJECT_PLAN.md                # 开发计划
-└── README.md                      # 项目说明
+├── report/                        # Test reports (v2.1.0)
+│   ├── README.md                  # Summary report
+│   ├── FUNCTIONAL_TEST_REPORT.md  # Functional tests
+│   ├── SECURITY_TEST_REPORT.md    # Security tests
+│   ├── FINAL_SECURITY_AUDIT_REPORT.md  # Security audit
+│   └── transaction_hashes.json    # On-chain tx data
+├── docs/                          # Documentation
+│   ├── 功能描述文档.md             # Feature description (CN)
+│   └── 技术重点及设计文档.md        # Technical design (CN)
+├── docker-compose.yml             # Docker config
+├── Cargo.toml                     # Dependencies (v2.1.0)
+├── PROJECT_PLAN.md                # Development plan
+├── README.md                      # This file
+└── README_CN.md                   # Chinese README
 ```
 
 ---
 
-## 📊 性能指标
+## 📊 Performance Metrics
 
-### v2.1.0 实测数据
+### v2.1.0 Benchmarks
 
-| 指标 | 目标值 | 实测值 | 状态 |
-|-----|--------|--------|------|
-| API响应时间(P99) | <500ms | <200ms | ✅ 超预期 |
-| 数据库查询(P95) | <10ms | <8ms | ✅ 达标 |
-| 并发TPS | 500+ | 800+ | ✅ 超预期 |
-| 内存使用 | <1GB | <500MB | ✅ 优秀 |
-| 系统可用性 | 99.9% | 99.95% | ✅ 达标 |
-| 代码覆盖率 | 90% | 94.3% | ✅ 超预期 |
+| Metric | Target | Actual | Status |
+|--------|--------|--------|--------|
+| API Response (P99) | <500ms | <200ms | ✅ Exceeded |
+| Database Query (P95) | <10ms | <8ms | ✅ Met |
+| Concurrent TPS | 500+ | 800+ | ✅ Exceeded |
+| Memory Usage | <1GB | <500MB | ✅ Excellent |
+| System Uptime | 99.9% | 99.95% | ✅ Met |
+| Code Coverage | 90% | 94.3% | ✅ Exceeded |
 
 ---
 
-## 🧪 测试报告
+## 🧪 Testing
 
-### v2.1.0 测试总结
+### v2.1.0 Test Summary
 
-| 测试类型 | 用例数 | 通过率 | 报告 |
-|---------|--------|--------|------|
-| 功能测试 | 780 | 100% | [FUNCTIONAL_TEST_REPORT.md](report/FUNCTIONAL_TEST_REPORT.md) |
-| 安全测试 | 328 | 100% | [SECURITY_TEST_REPORT.md](report/SECURITY_TEST_REPORT.md) |
-| 链上交易验证 | 328笔 | 100% | [transaction_hashes.json](report/transaction_hashes.json) |
+| Test Type | Cases | Pass Rate | Report |
+|-----------|-------|-----------|--------|
+| Functional | 780 | 100% | [FUNCTIONAL_TEST_REPORT.md](report/FUNCTIONAL_TEST_REPORT.md) |
+| Security | 328 | 100% | [SECURITY_TEST_REPORT.md](report/SECURITY_TEST_REPORT.md) |
+| On-Chain Verification | 328 txs | 100% | [transaction_hashes.json](report/transaction_hashes.json) |
 
-### 链上交易验证
+### On-Chain Verification
 
-v2.1.0版本所有功能测试均已通过链上验证:
-- **Solana**: 156笔交易 (所有交易均可在Solscan查证)
-- **Ethereum**: 89笔交易 (所有交易均可在Etherscan查证)
-- **BSC**: 45笔交易 (所有交易均可在BscScan查证)
-- **Polygon**: 38笔交易 (所有交易均可在PolygonScan查证)
+All v2.1.0 features verified on-chain:
+- **Solana**: 156 transactions (verifiable on Solscan)
+- **Ethereum**: 89 transactions (verifiable on Etherscan)
+- **BSC**: 45 transactions (verifiable on BscScan)
+- **Polygon**: 38 transactions (verifiable on PolygonScan)
 
-详细交易哈希见: [transaction_hashes.json](report/transaction_hashes.json)
+See detailed tx hashes: [transaction_hashes.json](report/transaction_hashes.json)
 
-### 运行测试
+### Run Tests
 
 ```bash
-# 单元测试
+# Unit tests
 cargo test
 
-# 集成测试
+# Integration tests
 cargo test --test '*'
 
-# 性能测试
+# Benchmarks
 cargo bench
 
-# 测试覆盖率
+# Coverage
 cargo tarpaulin --out Html
 ```
 
 ---
 
-## 🔐 安全审计
+## 🔐 Security Audit
 
-### v2.1.0 安全评级: B+级 (89/100)
+### v2.1.0 Security Rating: B+ Grade (89/100)
 
-详细审计报告: [FINAL_SECURITY_AUDIT_REPORT.md](report/FINAL_SECURITY_AUDIT_REPORT.md)
+Detailed audit: [FINAL_SECURITY_AUDIT_REPORT.md](report/FINAL_SECURITY_AUDIT_REPORT.md)
 
-#### 漏洞修复情况
+#### Vulnerability Remediation
 
-| 阶段 | 漏洞数 | 严重 | 高危 | 中危 | 低危 | 评级 |
-|-----|--------|------|------|------|------|------|
-| Phase 0 (审计前) | 23 | 8 | 9 | 4 | 2 | C级 |
-| Phase 1 (修复后) | 3 | 0 | 0 | 2 | 1 | B+级 |
-| **改善** | **-87%** | **-100%** | **-100%** | **-50%** | **-50%** | **+2级** |
+| Phase | Total | Critical | High | Medium | Low | Rating |
+|-------|-------|----------|------|--------|-----|--------|
+| Phase 0 (Before) | 23 | 8 | 9 | 4 | 2 | C Grade |
+| Phase 1 (After) | 3 | 0 | 0 | 2 | 1 | B+ Grade |
+| **Improvement** | **-87%** | **-100%** | **-100%** | **-50%** | **-50%** | **+2 Grades** |
 
-#### 合规性
+#### Compliance
 
-| 标准 | Phase 0 | Phase 1 | 提升 | 状态 |
-|-----|---------|---------|------|------|
-| PCI DSS v4.0 | 12.5% | 79% | +531% | ✅ 基本合规 |
-| SOC 2 Type II | 32% | 80% | +150% | ✅ 基本合规 |
-| ISO 27001:2022 | 22% | 72% | +227% | ✅ 基本合规 |
+| Standard | Phase 0 | Phase 1 | Improvement | Status |
+|----------|---------|---------|-------------|--------|
+| PCI DSS v4.0 | 12.5% | 79% | +531% | ✅ Basic Compliance |
+| SOC 2 Type II | 32% | 80% | +150% | ✅ Basic Compliance |
+| ISO 27001:2022 | 22% | 72% | +227% | ✅ Basic Compliance |
 
-#### 风险降低
+#### Risk Reduction
 
-- **年化风险降低**: $3.72M → $95K (降低97.5%)
-- **投资回报率**: 9,900%
-- **回本周期**: 3.6天
+- **Annual Risk Reduction**: $3.72M → $95K (97.5% reduction)
+- **ROI**: 9,900%
+- **Payback Period**: 3.6 days
 
 ---
 
-## 💻 使用示例
+## 💻 Usage Examples
 
-### 初始化系统
+### System Initialization
 
 ```rust
 use onchain_wallet::middleware::auth::JwtAuth;
@@ -453,13 +459,13 @@ use onchain_wallet::middleware::rate_limit::MultiLevelRateLimiter;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    // 初始化JWT认证
+    // Initialize JWT auth
     let jwt_auth = Arc::new(JwtAuth::from_env()?);
 
-    // 初始化速率限制器
+    // Initialize rate limiter
     let limiter = Arc::new(MultiLevelRateLimiter::from_redis_url("redis://localhost")?);
 
-    // 构建应用
+    // Build application
     let app = Router::new()
         .route("/api/v1/wallets", post(create_wallet))
         .layer(axum::middleware::from_fn_with_state(
@@ -472,7 +478,7 @@ async fn main() -> Result<()> {
         ))
         .layer(axum::middleware::from_fn(security_headers_middleware));
 
-    // 启动服务器
+    // Start server
     axum::Server::bind(&"0.0.0.0:8080".parse()?)
         .serve(app.into_make_service())
         .await?;
@@ -481,13 +487,13 @@ async fn main() -> Result<()> {
 }
 ```
 
-### 地址生成 (带认证)
+### Address Generation (with Auth)
 
 ```rust
 use onchain_wallet::services::blockchain::*;
 use onchain_wallet::middleware::auth::JwtAuth;
 
-// 生成JWT Token
+// Generate JWT token
 let jwt_auth = JwtAuth::from_env()?;
 let token = jwt_auth.generate_token(
     "user123",
@@ -495,208 +501,211 @@ let token = jwt_auth.generate_token(
     vec!["wallet:create".to_string()]
 )?;
 
-// 创建Solana适配器
+// Create Solana adapter
 let adapter = SolanaAdapter::new("https://api.mainnet-beta.solana.com");
 
-// 生成新地址
+// Generate new address
 let address = adapter.generate_address("m/44'/501'/0'/0'").await?;
-println!("新地址: {}", address.address);
+println!("New address: {}", address.address);
 ```
 
-### 提现 (带MFA验证)
+### Withdrawal (with MFA)
 
 ```rust
-// 创建提现请求
+// Create withdrawal request
 let withdrawal = WithdrawalRequest {
-    from_address: "发送地址".to_string(),
-    to_address: "接收地址".to_string(),
+    from_address: "sender_address".to_string(),
+    to_address: "receiver_address".to_string(),
     amount: 1_000_000_000, // 1 SOL
     chain: "solana".to_string(),
-    mfa_code: "123456".to_string(), // TOTP验证码
+    mfa_code: "123456".to_string(), // TOTP code
 };
 
-// 提交提现 (自动触发风控检查)
+// Submit withdrawal (auto risk check)
 let result = withdrawal_service.create(withdrawal).await?;
-println!("提现ID: {}, 状态: {}", result.id, result.status);
+println!("Withdrawal ID: {}, Status: {}", result.id, result.status);
 ```
 
 ---
 
-## 🔐 生产环境部署
+## 🔐 Production Deployment
 
-### 部署检查清单
+### Deployment Checklist
 
-#### 基础安全 ✅
-- [x] 更改所有默认密码
-- [x] 配置SSL/TLS证书
-- [x] 启用IP白名单
-- [x] 配置防火墙规则
-- [x] 启用AWS KMS密钥管理
-- [x] 配置MFA多因素认证
+#### Basic Security ✅
+- [x] Change all default passwords
+- [x] Configure SSL/TLS certificates
+- [x] Enable IP whitelist
+- [x] Configure firewall rules
+- [x] Enable AWS KMS key management
+- [x] Configure MFA authentication
 
-#### 监控告警 ✅
-- [x] 配置CloudWatch监控
-- [x] 设置异常告警
-- [x] 审计日志归档
-- [x] 定期备份数据库
+#### Monitoring & Alerts ✅
+- [x] Configure CloudWatch monitoring
+- [x] Set up anomaly alerts
+- [x] Archive audit logs
+- [x] Schedule database backups
 
-#### 性能优化 ✅
-- [x] 配置Redis缓存
-- [x] 数据库连接池优化
-- [x] 启用HTTP/2
-- [x] CDN加速
+#### Performance Optimization ✅
+- [x] Configure Redis cache
+- [x] Optimize database connection pool
+- [x] Enable HTTP/2
+- [x] CDN acceleration
 
-### 部署命令
+### Deployment Commands
 
 ```bash
-# 1. 拉取最新代码
-git pull origin main
+# 1. Pull latest code
+git pull origin master
 
-# 2. 构建生产版本
+# 2. Build production version
 cargo build --release --features production
 
-# 3. 运行数据库迁移
+# 3. Run database migrations
 psql -h <prod-db-host> -U wallet_user -d wallet_db -f migrations/001_init.sql
 
-# 4. 配置环境变量
+# 4. Configure environment
 export DATABASE_URL="postgresql://..."
 export REDIS_URL="redis://..."
 export AWS_KMS_KEY_ID="your-kms-key-id"
 export JWT_SECRET="your-jwt-secret"
 
-# 5. 启动服务
+# 5. Start service
 ./target/release/onchain-wallet
 ```
 
-### 灰度发布建议
+### Gradual Rollout
 
-- **第1周**: 10%流量,密切监控
-- **第2-3周**: 50%流量,收集反馈
-- **第4周**: 100%流量,全量发布
+- **Week 1**: 10% traffic, close monitoring
+- **Week 2-3**: 50% traffic, collect feedback
+- **Week 4**: 100% traffic, full deployment
 
 ---
 
-## 📚 文档
+## 📚 Documentation
 
-### 核心文档
-- [开发计划](PROJECT_PLAN.md) - 详细的开发路线图
-- [测试总结](report/README.md) - v2.1.0交付总结
-- [功能测试报告](report/FUNCTIONAL_TEST_REPORT.md) - 780个测试用例详情
-- [安全测试报告](report/SECURITY_TEST_REPORT.md) - OWASP Top 10测试
-- [安全审计报告](report/FINAL_SECURITY_AUDIT_REPORT.md) - 从C级到B+级的提升
-- [链上交易数据](report/transaction_hashes.json) - 328笔链上交易哈希
+### Core Documents
+- [Development Plan](PROJECT_PLAN.md) - Detailed roadmap
+- [Test Summary](report/README.md) - v2.1.0 delivery summary
+- [Functional Test Report](report/FUNCTIONAL_TEST_REPORT.md) - 780 test cases
+- [Security Test Report](report/SECURITY_TEST_REPORT.md) - OWASP Top 10
+- [Security Audit Report](report/FINAL_SECURITY_AUDIT_REPORT.md) - C to B+ upgrade
+- [On-Chain Transaction Data](report/transaction_hashes.json) - 328 tx hashes
 
-### API文档
+### API Documentation
 ```bash
-# 生成Rust API文档
+# Generate Rust API docs
 cargo doc --open
 ```
 
 ---
 
-## 🛣️ 开发路线图
+## 🛣️ Roadmap
 
-### ✅ Phase 0 - 基础架构 (已完成)
-- [x] Docker容器化部署
-- [x] 多链区块链适配器
-- [x] 数据库Schema设计
-- [x] 基础API实现
+### ✅ Phase 0 - Foundation (Completed)
+- [x] Docker containerization
+- [x] Multi-chain blockchain adapters
+- [x] Database schema design
+- [x] Basic API implementation
 
-### ✅ Phase 1 - 核心功能 & 安全强化 (v2.1.0 已完成)
-- [x] 18个功能模块100%实现
-- [x] AWS KMS密钥管理
-- [x] JWT认证授权
-- [x] MFA多因素认证
-- [x] 多级速率限制
-- [x] 安全响应头
-- [x] 错误处理完善
-- [x] 全面测试(780用例)
-- [x] 安全审计(B+级)
+### ✅ Phase 1 - Core Features & Security Hardening (v2.1.0 Completed)
+- [x] 18 functional modules 100% implemented
+- [x] AWS KMS key management
+- [x] JWT authentication & authorization
+- [x] MFA multi-factor authentication
+- [x] Multi-level rate limiting
+- [x] Security response headers
+- [x] Enhanced error handling
+- [x] Comprehensive testing (780 cases)
+- [x] Security audit (B+ grade)
 
-### 🚧 Phase 2 - 安全增强 (计划1-2周)
-**目标**: B+ → A-
-- [ ] SIEM系统集成
-- [ ] 完善灾难恢复计划
-- [ ] 优化API版本管理
-- [ ] 增强监控告警
+### 🚧 Phase 2 - Security Enhancement (Planned 1-2 weeks)
+**Target**: B+ → A-
+- [ ] SIEM system integration
+- [ ] Complete disaster recovery plan
+- [ ] Optimize API versioning
+- [ ] Enhanced monitoring & alerting
 
-### 📋 Phase 3 - 企业级完善 (计划1-2周)
-**目标**: A- → A
-- [ ] 第三方安全审计
-- [ ] 压力测试优化
-- [ ] 完善用户文档
-- [ ] 安全培训计划
+### 📋 Phase 3 - Enterprise Perfection (Planned 1-2 weeks)
+**Target**: A- → A
+- [ ] Third-party security audit
+- [ ] Stress testing optimization
+- [ ] Complete user documentation
+- [ ] Security training program
 
 ---
 
-## 🤝 贡献指南
+## 🤝 Contributing
 
-我们欢迎所有形式的贡献!
+We welcome all forms of contribution!
 
-### 如何贡献
-1. Fork 项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+### How to Contribute
+1. Fork the project
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
 
-### 代码规范
-- 遵循 Rust 官方代码风格
-- 添加必要的注释和文档
-- 确保所有测试通过 (覆盖率>90%)
-- 更新相关文档
-- 安全相关修改需经过审计
+### Code Standards
+- Follow Rust official code style
+- Add necessary comments and documentation
+- Ensure all tests pass (coverage >90%)
+- Update relevant documentation
+- Security-related changes require audit
 
 ---
 
 ## 📝 License
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ---
 
-## 👥 团队
+## 👥 Team
 
-- **架构设计**: DeFi Team
-- **核心开发**: Rust Engineers
-- **安全审计**: Security Team
-- **测试团队**: QA Engineers
-
----
-
-## 📞 联系我们
-
-- 项目主页: https://github.com/your-org/onchain-wallet
-- 问题反馈: https://github.com/your-org/onchain-wallet/issues
-- 安全漏洞: security@onchainwallet.com (PGP加密)
-- 技术支持: dev@onchainwallet.com
+- **Architecture Design**: DeFi Team
+- **Core Development**: Rust Engineers
+- **Security Audit**: Aitachi
+- **Testing**: Aitachi
 
 ---
 
-## 🙏 致谢
+## 📞 Contact
 
-感谢以下开源项目:
-- [Rust](https://www.rust-lang.org/) - 系统编程语言
-- [Tokio](https://tokio.rs/) - 异步运行时
-- [Axum](https://github.com/tokio-rs/axum) - Web框架
-- [Solana](https://solana.com/) - 高性能区块链
-- [Ethers-rs](https://github.com/gakonst/ethers-rs) - Ethereum库
-- [PostgreSQL](https://www.postgresql.org/) - 关系数据库
-- [Redis](https://redis.io/) - 内存数据库
-- [AWS KMS](https://aws.amazon.com/kms/) - 密钥管理服务
+- Project Homepage: https://github.com/aitachi/onchainWallet
+- Issue Tracker: https://github.com/aitachi/onchainWallet/issues
+- Security Vulnerabilities: 44158892@qq.com (PGP encrypted)
+- Technical Support: 44158892@qq.com
+
+---
+
+## 🙏 Acknowledgments
+
+Thanks to these open-source projects:
+- [Rust](https://www.rust-lang.org/) - Systems programming language
+- [Tokio](https://tokio.rs/) - Async runtime
+- [Axum](https://github.com/tokio-rs/axum) - Web framework
+- [Solana](https://solana.com/) - High-performance blockchain
+- [Ethers-rs](https://github.com/gakonst/ethers-rs) - Ethereum library
+- [PostgreSQL](https://www.postgresql.org/) - Relational database
+- [Redis](https://redis.io/) - In-memory database
+- [AWS KMS](https://aws.amazon.com/kms/) - Key management service
 
 ---
 
 <div align="center">
 
-**[⬆ 回到顶部](#企业级多链钱包系统)**
+**[⬆ Back to Top](#enterprise-multi-chain-wallet-system)**
 
 ---
 
-### 🎉 v2.1.0 生产就绪 | B+级安全 | 97.5%风险降低
+### 🎉 v2.1.0 Production Ready | B+ Security | 97.5% Risk Reduction
 
-**项目状态**: ✅ 可安全部署至生产环境
+**Project Status**: ✅ Safe for Production Deployment
 
-Made with ❤️ by DeFi Team
+**Author**: Aitachi
+**Email**: 44158892@qq.com
+
+Made with ❤️ by Aitachi
 
 </div>
